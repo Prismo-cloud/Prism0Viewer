@@ -1,0 +1,69 @@
+{
+    "name": "prism0viewer",
+    "displayName": "prism0Viewer",
+    "description": "Prism0 is designed to enhance focus and clarity in complex projects. By dimming unselected code and emphasizing only what truly matters, it eliminates distractions and creates a seamless, immersive coding experience. Whether you're navigating a massive codebase or fine-tuning critical sections, Prism0 helps you stay in the flow, making every line of code stand out with precision.",
+    "version": "0.0.1",
+    "publisher": "Prism0-Viewer",
+    "engines": {
+        "vscode": "^1.97.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [{
+                "command": "prism0.highlight",
+                "title": "Highlight Selection"
+            },
+            {
+                "command": "prism0.removeHighlight",
+                "title": "Remove Highlight"
+            }
+        ],
+        "keybindings": [{
+                "command": "prism0.highlight",
+                "key": "ctrl+alt+q",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "prism0.removeHighlight",
+                "key": "ctrl+alt+w",
+                "when": "editorTextFocus"
+            }
+        ],
+        "viewsContainers": {
+            "activitybar": [{
+                "id": "customSidebar",
+                "title": "Prim0",
+                "icon": "eye.svg"
+            }]
+        },
+        "views": {
+            "customSidebar": [{
+                "id": "customView",
+                "name": "Prim0 View"
+            }]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.97.0",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "20.x",
+        "@typescript-eslint/eslint-plugin": "^8.22.0",
+        "@typescript-eslint/parser": "^8.22.0",
+        "eslint": "^9.19.0",
+        "typescript": "^5.7.3",
+        "@vscode/test-cli": "^0.0.10",
+        "@vscode/test-electron": "^2.4.1"
+    }
+}
