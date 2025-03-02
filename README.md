@@ -9,6 +9,8 @@
 - **Custom sidebar**: Quickly toggle effects using a dedicated sidebar.
 - **Minimalist and distraction-free design**: Helps you focus on important code sections.
 
+![Prism0 Viewer Demo](assets/gif.gif)
+
 ## Installation
 
 ### Install from VS Code Marketplace
@@ -21,7 +23,7 @@
 
 ### Manual Installation
 
-1. Download the latest `.vsix` file from the [Releases](https://github.com/your-repo-link/releases) page.
+1. Download the latest `.vsix` file from the [Releases](https://github.com/Prismo-cloud/Prism0Viewer.git) page.
 2. Open **VS Code**.
 3. Open the command palette (`Ctrl + Shift + P`) and search for `Extensions: Install from VSIX`.
 4. Select the downloaded `.vsix` file to install it.
@@ -63,6 +65,8 @@
    ```
 
 ## Usage
+
+![Prism0 Viewer UI](assets/screenshot.png)
 
 1. **Highlight Selected Code**
    - Select the code you want to highlight.
